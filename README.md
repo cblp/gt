@@ -27,4 +27,4 @@ Rules
     - the feature is useful for the project and
     - the method chosen to implement the feature is reasonable.
 
-  A good mentor should answer other questions too.
+  A good mentor may answer other questions too.
