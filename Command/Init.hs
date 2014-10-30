@@ -1,7 +1,12 @@
 module Command.Init where
 
-import System.Process
+import Control.Monad            ( guard )
+import Control.Monad.Trans.Error( {- MonadPlus IO -- for guard -} )
+import System.Exit              ( ExitCode(ExitSuccess) )
+import System.Process           ( system )
 
-main = do 
-          result <- system "git init"
-          return ()
+
+main :: IO ()
+main = do
+    exitCode <- system "git init"
+    guard $ exitCode == ExitSuccess

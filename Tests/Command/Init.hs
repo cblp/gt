@@ -6,6 +6,7 @@ import System.IO.Temp           ( withSystemTempDirectory )
 import qualified Command.Init   ( main )
 
 
+main :: IO ()
 main =
     withSystemTempDirectory "" $ \tmp -> do
         setCurrentDirectory tmp

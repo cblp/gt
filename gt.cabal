@@ -21,6 +21,8 @@ executable gt-init
     -- other-modules:
     build-depends:      base
                     ,   process
+                    ,   transformers
+    ghc-options:        -Wall -Werror
 
 test-suite test-gt-init
     type:               exitcode-stdio-1.0
@@ -29,3 +31,5 @@ test-suite test-gt-init
                     ,   directory
                     ,   process
                     ,   temporary
+                    ,   transformers
+    ghc-options:        -Wall -Werror
