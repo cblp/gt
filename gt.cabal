@@ -3,6 +3,7 @@ version:                0.1.0.0
 synopsis:               A git-based version control system
 -- description:
 homepage:               https://github.com/cblp/gt
+bug-reports:            https://github.com/cblp/gt/issues
 license:                GPL-2
 license-file:           LICENSE
 author:                 Yuriy Syrovetskiy
