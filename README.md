@@ -30,3 +30,24 @@ Rules
     - the method chosen to implement the feature is reasonable.
 
   A good mentor may answer other questions too.
+
+Building
+--------
+
+    $ cabal build
+
+Old cabal:
+
+    $ cabal configure
+    $ cabal build
+
+Testing
+--------
+
+    $ cabal test
+
+Old cabal:
+
+    $ cabal configure --enable-tests
+    $ cabal build
+    $ cabal test
