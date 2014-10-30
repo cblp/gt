@@ -1,7 +1,7 @@
-module Init where 
+module Command.Init where
 
 import System.Process
 
 main = do 
-          result <- callCommand "git init"
+          result <- system "git init"
           return ()
