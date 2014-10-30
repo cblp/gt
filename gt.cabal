@@ -18,4 +18,4 @@ cabal-version:       >=1.8
 executable gt-init
     main-is:            Command/Init.hs
     -- other-modules:
-    build-depends:      base ==4.6.*
+    build-depends:      process, base ==4.6.*
