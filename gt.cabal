@@ -23,6 +23,12 @@ executable gt-init
                     ,   transformers
     ghc-options:        -Wall -Werror
 
+executable gt-help
+    main-is:            Command/HelpMain.hs
+    -- other-modules:
+    build-depends:      base
+    ghc-options:        -Wall -Werror
+
 test-suite test-gt-init
     type:               exitcode-stdio-1.0
     main-is:            Tests/Command/Init.hs
