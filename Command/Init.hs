@@ -6,7 +6,7 @@ import System.Exit              ( ExitCode(ExitSuccess) )
 import System.Process           ( system )
 
 
-main :: IO ()
-main = do
+gtInit :: IO ()
+gtInit = do
     exitCode <- system "git init"
     guard $ exitCode == ExitSuccess

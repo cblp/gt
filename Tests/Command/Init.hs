@@ -3,12 +3,12 @@ import System.Directory         ( doesDirectoryExist, setCurrentDirectory )
 import System.IO.Temp           ( withSystemTempDirectory )
 
 -- internal modules
-import qualified Command.Init   ( main )
+import Command.Init             ( gtInit )
 
 
 main :: IO ()
 main =
     withSystemTempDirectory "" $ \tmp -> do
         setCurrentDirectory tmp
-        Command.Init.main
+        gtInit
         guard =<< doesDirectoryExist ".git"
