@@ -10,7 +10,7 @@ author:                 Yuriy Syrovetskiy
                     ,   sphaso
 maintainer:             cblp@cblp.su
 -- copyright:
--- category:
+category:               Development
 build-type:             Simple
 cabal-version:          >=1.8
 
