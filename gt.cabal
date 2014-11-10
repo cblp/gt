@@ -1,7 +1,9 @@
 name:                   gt
 version:                0.0.0.0
 synopsis:               A git-based version control system
--- description:
+description:            A version control system, based on git,
+                        and compatible with git.
+                        Gt fixes several git's shortcomings.
 homepage:               https://github.com/cblp/gt
 bug-reports:            https://github.com/cblp/gt/issues
 license:                GPL-2
