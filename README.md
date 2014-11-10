@@ -67,4 +67,4 @@ Building
 Testing
 --------
 
-    $ cabal test
+    $ cabal test --ghc-option=-Werror
