@@ -34,6 +34,7 @@ Rules
 Installing dependencies
 -----------------------
 
+    $ cabal update  # if you didn't before
     $ cabal install --only-dependencies
 
 If you have conflicts with installed packages like
