@@ -12,7 +12,7 @@ Development process
 -------------------
 
 This project is used as a teaching material 
-by [Perunity Haskell group](http://www.perunity.com/group/21).
+by [Perunity Haskell group][].
 Anybody can take part in the project throw implementing a new feature or fixing a bug.
 Just create an issue in this project or assign an existing issue to yourself.
 When participating in development, you can ask any questions on Haskell language,
@@ -24,12 +24,14 @@ Rules
 
 1. Where can mentee ask
     - In the issue comments.
-    - [Perunity Haskell group](http://www.perunity.com/group/21).
+    - [Perunity Haskell group][].
 2. Mentors must do the best efforts to answer questions, if
     - the feature is useful for the project and
     - the method chosen to implement the feature is reasonable.
 
   A good mentor may answer other questions too.
+
+[Perunity Haskell group]: http://www.perunity.com/group/21
 
 Installing dependencies
 -----------------------
