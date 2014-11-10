@@ -31,23 +31,39 @@ Rules
 
   A good mentor may answer other questions too.
 
+Installing dependencies
+-----------------------
+
+    $ cabal install --only-dependencies
+
+If you have conflicts with installed packages like
+
+    $ cabal install --only-dependencies
+    Resolving dependencies...
+    In order, the following would be installed:
+    .
+    .
+    .
+    cabal: The following packages are likely to be broken by the reinstalls:
+    .
+    .
+    .
+    Use --force-reinstalls if you want to install anyway.
+
+then do
+
+    $ cabal sandbox init
+    $ cabal install --only-dependencies --force-reinstalls
+
+It will install packages into a sandbox in current directory,
+and won't break cabal packages installed globally.
+
 Building
 --------
 
     $ cabal build
 
-Old cabal:
-
-    $ cabal configure
-    $ cabal build
-
 Testing
 --------
 
-    $ cabal test
-
-Old cabal:
-
-    $ cabal configure --enable-tests
-    $ cabal build
     $ cabal test

@@ -1,5 +1,5 @@
 name:                   gt
-version:                0.1.0.0
+version:                0.0.0.0
 synopsis:               A git-based version control system
 -- description:
 homepage:               https://github.com/cblp/gt
@@ -18,17 +18,17 @@ cabal-version:          >=1.8
 executable gt-init
     main-is:            Command/InitMain.hs
     -- other-modules:
-    build-depends:      base
-                    ,   process
-                    ,   transformers
+    build-depends:      base            >= 4.6.0    && < 4.7
+                    ,   process         >= 1.1.0    && < 1.2
+                    ,   transformers    >= 0.3.0    && < 0.4
     ghc-options:        -Wall -Werror
 
 test-suite test-gt-init
     type:               exitcode-stdio-1.0
     main-is:            Tests/Command/Init.hs
-    build-depends:      base
-                    ,   directory
-                    ,   process
-                    ,   temporary
-                    ,   transformers
+    build-depends:      base            >= 4.6.0    && < 4.7
+                    ,   directory       >= 1.2.0    && < 1.3
+                    ,   process         >= 1.1.0    && < 1.2
+                    ,   temporary       >= 1.2.0    && < 1.3
+                    ,   transformers    >= 0.3.0    && < 0.4
     ghc-options:        -Wall -Werror
