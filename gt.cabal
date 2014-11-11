@@ -33,6 +33,17 @@ executable gt-init
                     ,   transformers    >= 0.3.0    && < 0.4
     ghc-options:        -Wall
 
+executable gt-log
+    main-is:            Command/LogMain.hs
+    build-depends:      base            >= 4.6.0    && < 4.7
+                    ,   gitlib          >= 3.1.0    && < 3.2
+                    ,   gitlib-libgit2  >= 3.1.0    && < 3.2
+                    ,   tagged          >= 0.7.2    && < 0.8
+                    ,   text            >= 0.11.3   && < 0.12
+                    ,   transformers    >= 0.3.0    && < 0.4
+    ghc-options:        -Wall
+    extensions:         OverloadedStrings
+
 test-suite test-gt-init
     type:               exitcode-stdio-1.0
     main-is:            Tests/Command/Init.hs
