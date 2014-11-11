@@ -23,7 +23,6 @@ source-repository head
 
 executable gt-init
     main-is:            Command/InitMain.hs
-    -- other-modules:
     build-depends:      base            >= 4.6.0    && < 4.7
                     ,   process         >= 1.1.0    && < 1.2
                     ,   transformers    >= 0.3.0    && < 0.4
@@ -31,9 +30,8 @@ executable gt-init
 
 executable gt-help
     main-is:            Command/HelpMain.hs
-    -- other-modules:
-    build-depends:      base
-    ghc-options:        -Wall -Werror
+    build-depends:      base            >= 4.6.0    && < 4.7
+    ghc-options:        -Wall
 
 test-suite test-gt-init
     type:               exitcode-stdio-1.0
