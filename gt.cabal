@@ -21,16 +21,16 @@ source-repository head
     location:           https://github.com/cblp/gt.git
 
 
+executable gt-help
+    main-is:            Command/HelpMain.hs
+    build-depends:      base            >= 4.6.0    && < 4.7
+    ghc-options:        -Wall
+
 executable gt-init
     main-is:            Command/InitMain.hs
     build-depends:      base            >= 4.6.0    && < 4.7
                     ,   process         >= 1.1.0    && < 1.2
                     ,   transformers    >= 0.3.0    && < 0.4
-    ghc-options:        -Wall
-
-executable gt-help
-    main-is:            Command/HelpMain.hs
-    build-depends:      base            >= 4.6.0    && < 4.7
     ghc-options:        -Wall
 
 test-suite test-gt-init
