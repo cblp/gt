@@ -1,4 +1,4 @@
 import Command.Help
 
 main :: IO ()
-main = gtHelp
+main = putStr gtHelp
