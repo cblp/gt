@@ -1,6 +1,6 @@
-import Command.Log
+import Command.Log      ( gtLog )
 
-import Git
+import Git              ( commitLog, commitOid )
 import Data.Tagged      ( untag )
 import qualified Data.Text as Text
 

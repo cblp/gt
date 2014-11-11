@@ -1,10 +1,18 @@
 module Command.Log (gtLog) where
 
-import Git
-import Git.Libgit2              ( LgRepo, lgFactory )
-
-
-type GtCommit = Commit LgRepo
+import Git          ( Commit
+                    , MonadGit
+                    , Object(CommitObj)
+                    , Oid
+                    , RefName
+                    , RefTarget(RefObj, RefSymbolic)
+                    , lookupCommitParents
+                    , lookupObject
+                    , lookupReference
+                    , withRepository
+                    )
+import Git.Libgit2  ( lgFactory )
+import Gt           ( GtCommit )
 
 
 gtLog :: IO [GtCommit]
