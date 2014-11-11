@@ -4,6 +4,7 @@ import System.IO.Temp           ( withSystemTempDirectory )
 
 -- internal modules
 import Command.Init             ( gtInit )
+import Command.Log              ( gtLog )
 
 
 main :: IO ()
@@ -12,3 +13,5 @@ main =
         setCurrentDirectory tmp
         gtInit
         guard =<< doesDirectoryExist ".git"
+        commits <- gtLog
+        guard $ null commits

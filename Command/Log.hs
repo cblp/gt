@@ -1,28 +1,21 @@
 module Command.Log (gtLog) where
 
-import Control.Monad.IO.Class   ( liftIO )
-import Data.Maybe               ( fromMaybe )
-import Data.Tagged              ( untag )
 import Git
-import Git.Libgit2              ( lgFactory )
-import qualified Data.Text as Text
+import Git.Libgit2              ( LgRepo, lgFactory )
 
 
-gtLog :: IO ()
+type GtCommit = Commit LgRepo
+
+
+gtLog :: IO [GtCommit]
 gtLog =
     withRepository lgFactory "." $ do
-        headOid <-  lookupReferenceOid "HEAD"
-                    $> fromMaybe (error "Cannot resolve HEAD")
-        CommitObj headCommit <- lookupObject headOid
-        branch <- getBranchCommits headCommit
-        liftIO $ mapM_ printCommit branch
-
-    where
-
-    printCommit c = putStrLn $ unwords
-        [ take 7 $ show $ untag $ commitOid c
-        , Text.unpack $ head $ Text.lines $ commitLog c
-        ]
+        mHeadOid <- lookupReferenceOid "HEAD"
+        case mHeadOid of
+            Nothing -> return []
+            Just headOid -> do
+                CommitObj headCommit <- lookupObject headOid
+                getBranchCommits headCommit
 
 
 getBranchCommits :: MonadGit repo monadGit =>
@@ -43,7 +36,3 @@ lookupReferenceOid refname = do
         Nothing                     -> return Nothing
         Just (RefObj oid)           -> return $ Just oid
         Just (RefSymbolic refname') -> lookupReferenceOid refname'
-
-
-($>) :: Functor functor => functor a -> (a -> b) -> functor b
-($>) = flip fmap
