@@ -23,19 +23,19 @@ source-repository head
 
 executable gt-help
     main-is:            Command/HelpMain.hs
-    build-depends:      base            >= 4.6.0    && < 4.7
+    build-depends:      base            >= 4.6.0    && < 4.8
     ghc-options:        -Wall
 
 executable gt-init
     main-is:            Command/InitMain.hs
-    build-depends:      base            >= 4.6.0    && < 4.7
-                    ,   process         >= 1.1.0    && < 1.2
+    build-depends:      base            >= 4.6.0    && < 4.8
+                    ,   process         >= 1.1.0    && < 1.3
                     ,   transformers    >= 0.3.0    && < 0.4
     ghc-options:        -Wall
 
 executable gt-log
     main-is:            Command/LogMain.hs
-    build-depends:      base            >= 4.6.0    && < 4.7
+    build-depends:      base            >= 4.6.0    && < 4.8
                     ,   gitlib          >= 3.1.0    && < 3.2
                     ,   gitlib-libgit2  >= 3.1.0    && < 3.2
                     ,   tagged          >= 0.7.2    && < 0.8
@@ -47,11 +47,11 @@ executable gt-log
 test-suite test-gt-init-log
     type:               exitcode-stdio-1.0
     main-is:            Tests/Command/InitLog.hs
-    build-depends:      base            >= 4.6.0    && < 4.7
+    build-depends:      base            >= 4.6.0    && < 4.8
                     ,   directory       >= 1.2.0    && < 1.3
                     ,   gitlib          >= 3.1.0    && < 3.2
                     ,   gitlib-libgit2  >= 3.1.0    && < 3.2
-                    ,   process         >= 1.1.0    && < 1.2
+                    ,   process         >= 1.1.0    && < 1.3
                     ,   tagged          >= 0.7.2    && < 0.8
                     ,   temporary       >= 1.2.0    && < 1.3
                     ,   text            >= 0.11.3   && < 0.12
