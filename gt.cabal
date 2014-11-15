@@ -64,6 +64,7 @@ test-suite test-gt-branch
                     ,   process         >= 1.1.0    && < 1.3
                     ,   temporary       >= 1.2.0    && < 1.3
                     ,   transformers    >= 0.3.0    && < 0.4
+                    ,   text            >= 0.11.3   && < 0.12
     ghc-options:        -Wall
     extensions:         OverloadedStrings
 
