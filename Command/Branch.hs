@@ -1,12 +1,9 @@
 module Command.Branch where
 
+import Git          ( withRepository, RefName )
 import Git.Libgit2  ( lgFactory )
-import Git          ( withRepository,
-                      RefName )
+import Git.Types    ( lookupReference, RefTarget(..) )
 
-import Git.Types ( lookupReference,
-                   RefTarget(..)
-                   )
 
 gtBranch :: IO (Maybe RefName)
 gtBranch = do
