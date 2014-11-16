@@ -18,7 +18,6 @@ main = do
             setCurrentDirectory tmp
             gtInit
             gtBranch >>= assertEqual "gtBranch" (Just "master")
-            run "touch afile"
             runGit "commit --allow-empty --message=message"
             runGit "checkout $(git rev-parse HEAD)"
             gtBranch >>= assertEqual "gtBranch" Nothing
