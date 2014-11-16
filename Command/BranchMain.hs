@@ -4,5 +4,5 @@ main :: IO ()
 main = do
     branch <- gtBranch
     case branch of
-        Nothing -> putStrLn "WAT. Weird HEAD link" 
+        Nothing -> putStrLn "At no branch"
         Just name -> putStrLn $ name
