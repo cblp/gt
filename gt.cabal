@@ -65,7 +65,7 @@ test-suite test-gt-branch
                     ,   temporary       >= 1.2.0    && < 1.3
                     ,   transformers    >= 0.3.0    && < 0.4
                     ,   text            >= 0.11.3   && < 0.12
-                    ,   unix            >= 2.6.0    && < 2.7
+                    ,   unix            >= 2.6.0    && < 2.8
     ghc-options:        -Wall
     extensions:         OverloadedStrings
 
