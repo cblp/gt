@@ -9,6 +9,7 @@ bug-reports:            https://github.com/cblp/gt/issues
 license:                GPL-2
 license-file:           LICENSE
 author:                 Yuriy Syrovetskiy
+                    ,   Alexander Putilin
                     ,   sphaso
 maintainer:             cblp@cblp.su
 -- copyright:
