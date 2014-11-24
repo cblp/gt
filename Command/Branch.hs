@@ -9,7 +9,7 @@ refName :: Maybe (RefTarget r) -> Maybe String
 refName reftarget = do
     r <- reftarget
     case r of
-        RefObj _ -> fail ""
+        RefObj _ -> Nothing
         RefSymbolic refname -> return $ Text.unpack $ last $ Text.splitOn "/" refname
 
 gtBranch :: IO (Maybe String)
