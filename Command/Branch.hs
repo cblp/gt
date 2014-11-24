@@ -5,10 +5,9 @@ import Git.Libgit2  ( lgFactory )
 import Git.Types    ( lookupReference, RefTarget(..) )
 import qualified Data.Text as Text
 
-refName :: Maybe (RefTarget r) -> Maybe String
-refName reftarget = do
-    r <- reftarget
-    case r of
+refName :: RefTarget r -> Maybe String
+refName reftarget =
+    case reftarget of
         RefObj _ -> Nothing
         RefSymbolic refname -> return $ Text.unpack $ last $ Text.splitOn "/" refname
 
@@ -16,4 +15,4 @@ gtBranch :: IO (Maybe String)
 gtBranch =
     withRepository lgFactory "." $ do
         ref <- lookupReference "HEAD"
-        return $ refName ref
+        return $ (ref >>= refName)
